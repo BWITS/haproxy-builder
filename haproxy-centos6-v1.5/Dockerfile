@@ -5,7 +5,7 @@ ENV version 18
 ENV release 1
 
 RUN yum -y update
-RUN yum install -y rpm-build rpmdevtools pcre-devel openssl-devel zlib-devel redhat-rpm-config gcc gcc-c++ make libstdc++-devel wget rpmlint vim
+RUN yum install -y rpm-build rpmdevtools pcre-devel openssl-devel zlib-devel redhat-rpm-config gcc gcc-c++ make libstdc++-devel wget rpmlint vim ; yum clean all
 RUN rpmdev-setuptree
 RUN wget http://www.haproxy.org/download/${branch}/src/haproxy-${branch}.${version}.tar.gz
 RUN gtar zxvf haproxy-${branch}.${version}.tar.gz haproxy-${branch}.${version}/examples/*
