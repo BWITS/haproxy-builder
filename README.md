@@ -4,8 +4,9 @@ The resulting RPM will be in image's /root/rpmbuild/RPMS/x86_64
 
 ### Get the RPM
 
-1. update the version in `download.sh`
-2. download the RPM file
+1. Check what version can be downloaded at https://hub.docker.com/r/bwits/haproxy/tags/
+2. update the version in `download.sh`
+3. download the RPM file
 
     ./download.sh
 
@@ -32,3 +33,9 @@ docker rm -v $id
 
 ls -l haproxy-${tag}-1.x86_64.rpm
 ```
+### How to support
+
+1. When there are new stable versions at http://www.haproxy.org/, you can raise PR to update the related Dockerfile, normally simply update the environment `version` is enough.
+2. set the tag on this new commit
+3. trigger a new build at hub.docker.com
+
