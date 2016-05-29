@@ -2,11 +2,22 @@
 
 The resulting RPM will be in image's /root/rpmbuild/RPMS/x86_64
 
+### Why need haproxy builder?
+
+* There is no exist RPM for you to download from www.haproxy.org
+* Some online documents teach you how to install latest haproxy in centos step-by-step, which you need spend time to follow up.
+* Several github repos make the scripts to help you to build the RPM by yourself 
+
+The way I provision makes the whole processes easier. I use hub.docker.com as repo server. You can download haproxy RPM directly.  
+
+This is a generic way for any packages if you need build from source codes.
+
 ### Get the RPM
 
-1. Check what version can be downloaded at https://hub.docker.com/r/bwits/haproxy/tags/
-2. update the version in `download.sh`
-3. download the RPM file
+1. Install Docker (https://docs.docker.com/engine/installation/)
+2. Check which version can be downloaded at https://hub.docker.com/r/bwits/haproxy/tags/
+3. update the version in `download.sh`
+4. download the RPM file
 
     ./download.sh
 
